@@ -8,7 +8,7 @@
 #include <SDL/SDL_mixer.h>
 #define SCREEN_W 1320
 #define SCREEN_H 720
-#define nombre_imag_sprite 20			//nombre d'images mta3 il spritesheet
+#define nombre_imag_sprite 17			//nombre d'images mta3 il spritesheet
 typedef struct
 {
 	SDL_Surface *img_background,	//img mta3 il background

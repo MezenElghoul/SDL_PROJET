@@ -1,8 +1,8 @@
 #include "joueur.h"
 void initperso(Personne *p,int x,int y)
 {
-	p->colonne=10;		//nombre d'image fi ligne wahda barka fi spritesheet
-	p->ligne=5;			//.... fi colone wahda  (check il spritesheet)
+	p->colonne=6;		//nombre d'image fi ligne wahda barka fi spritesheet
+	p->ligne=3;			//.... fi colone wahda  (check il spritesheet)
 	p->position.x=x;	// position win bich yahbet
 	p->position.y=y;
 	p->pos_vie.x=000;	//position mta3 il affichage mta3 li9loub
@@ -17,10 +17,10 @@ void initperso(Personne *p,int x,int y)
 	p->acceleration_initial_y=0.008;
 	p->duree_anim=SDL_GetTicks();
 
-	p->spritesheet[1]=IMG_Load("./player/pers.png");
+	p->spritesheet[1]=IMG_Load("./player/perso.png");
 	if(p->spritesheet[1]==NULL)
 		printf("error spritehseet[0]\n");
-	p->spritesheet[0]=IMG_Load("./player/pers1.png");
+	p->spritesheet[0]=IMG_Load("./player/perso1.png");
 	if(p->spritesheet[0]==NULL)
 		printf("error spritehseet[1]\n");
 	p->animation.x=0;
@@ -137,25 +137,25 @@ void animerperso(Personne *P )
             }
 
 	if(P->vitesse_y>0){                   //itha ken il charactere habet
-            if( P->num<= 46 || P->num > 50 )	
+            if( P->num<= 9 || P->num > 11 )	
 			{
-                P->num=47;
+                P->num=9;
             }
         }
 	else if(P->vitesse_y<0){                   //itha ken il charactere tale3 il fou9
-            if( P->num<=40 || P->num > 46 )
+            if( P->num<=6 || P->num > 7 )
 			{
-                P->num=41;
+                P->num=6;
             }
         }
 	else { //vitesse_y ==0
-		if(P->vitesse_x==0 && P->num > 10)
+		if(P->vitesse_x==0 && P->num > 1)
             {
                         P->num= 1 ;     // wa9ef
             }
-		else if(P->vitesse_x!=0 && P->num <= 10 || P->num> 40)
+		else if(P->vitesse_x!=0 && P->num <= 2 || P->num> 5)
             {
-                        P->num= 11 ;     // yejri
+                        P->num= 2 ;     // yejri
             }
 	}
 

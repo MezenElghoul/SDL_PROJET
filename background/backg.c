@@ -3,7 +3,7 @@
 
 void initBack(background*b){
 
-	b->img_background=IMG_Load("./background/sheet.png");
+	b->img_background=IMG_Load("./background/sheet2.jpeg");
 		if(!b->img_background)printf("%s\n","error failed to load background");
 	b->mask_background=IMG_Load("./background/mask1.png");
 		if(!b->mask_background)printf("%s\n","error failed to load mask");
